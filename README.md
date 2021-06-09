@@ -13,7 +13,7 @@ $ mat
 0 7 -4
 ```
 
-The previous command will produce the following output:
+which outputs
 
 ```
 1 0 23/14
@@ -30,7 +30,7 @@ $ mat -ref
 0 7 -4
 ```
 
-which will output
+which outputs
 
 ```
 1 -3/2 5/2
@@ -51,7 +51,7 @@ There are two ways to build `mat`:
 
 - [`cmake`](https://cmake.org/) or `make`
 
-Ensure you have `cmake` installed. If you don't, see the official [CMake webpage](https://cmake.org/runningcmake/) for instructions to install it. Once you have installed CMake, clone this repo and run the following commands from the repo's directory:
+Ensure you have `cmake` installed. If you don't, see the official [CMake webpage](https://cmake.org/runningcmake/) for instructions to install it. Once you have installed CMake, clone this repo and run the following commands from the repo's directory.
 
 ```
 cmake -B build
@@ -63,20 +63,20 @@ Alternatively, see the [CMake documentation](https://cmake.org/runningcmake/) fo
 
 ### Build using GNU Make (Linux and MacOS only)
 
-Clone this repo and run the following commands
+Clone this repo and run the following commands.
 
 ```
 $ make
 $ sudo make install
 ```
 
-The `mat` executable will be installed to your `/usr/local/bin`. You may now clean the temporary files created during the build process by running this command
+The `mat` executable will be installed to your `/usr/local/bin`. You may now clean the temporary files created during the build process by running this command.
 
 ```
 $ make clean
 ```
 
-To uninstall (when built with GNU Make):
+To uninstall (when built with GNU Make),
 
 ```
 $ sudo make uninstall
