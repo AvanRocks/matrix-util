@@ -49,8 +49,6 @@ There are two ways to build `mat`:
 
 ### Build using CMake
 
-- [`cmake`](https://cmake.org/) or `make`
-
 Ensure you have `cmake` installed. If you don't, see the official [CMake webpage](https://cmake.org/runningcmake/) for instructions to install it. Once you have installed CMake, clone this repo and run the following commands from the repo's directory.
 
 ```
@@ -70,7 +68,7 @@ $ make
 $ sudo make install
 ```
 
-The `mat` executable will be installed to your `/usr/local/bin`. You may now clean the temporary files created during the build process by running this command.
+The `mat` executable will be installed to your `/usr/local/bin`. You may now clean the temporary files created during the build process by running
 
 ```
 $ make clean
