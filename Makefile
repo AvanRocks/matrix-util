@@ -4,25 +4,22 @@ ifeq ($(PREFIX),)
   PREFIX := /usr/local
 endif
 
-OBJDIR=obj
 SRCDIR=src
 
 _DEPS = Fraction.h Matrix.h
 DEPS = $(patsubst %,$(SRCDIR)/%,$(_DEPS))
 
-_OBJ = Fraction.o Matrix.o mat.o
-OBJ = $(patsubst %,$(OBJDIR)/%,$(_OBJ))
+OBJ = Fraction.o Matrix.o mat.o
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(DEPS) | $(OBJDIR)
+all: mat
+
+%.o: $(SRCDIR)/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 mat: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
-$(OBJDIR):
-	mkdir $(OBJDIR)
-
-install: mat
+install: all
 	install -d $(DESTDIR)$(PREFIX)/bin/
 	install mat $(DESTDIR)$(PREFIX)/bin/
 
@@ -30,6 +27,6 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/mat
 
 clean:
-	rm -rf $(OBJDIR) *~ core
+	rm -f $(OBJ) *~ core
 
 .PHONY: clean install uninstall
