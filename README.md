@@ -2,18 +2,17 @@
 
 A utility that reduces matrices into rref or ref. Can be used to solve systems of linear equations.
 
-## Usage
+For example,
 
-Run the executable `mat` and type in your matrix row by row. Type `Enter` after the last row and then hit `Control + D` to end the input. By default, `mat` will output the matrix in [Reduced Row Echelon Form](https://en.wikipedia.org/wiki/Row_echelon_form). For example,
+Entering this matrix
 
 ```
-$ mat
 2 -3 5
 4 1 6
 0 7 -4
 ```
 
-which outputs
+outputs the following (in Reduced Row Echelon Form)
 
 ```
 1 0 23/14
@@ -21,16 +20,15 @@ which outputs
 0 0 0
 ```
 
-If you want to reduce the matrix into Row Echelon Form (as opposed to _Reduced_ Row Echelon Form), pass the `-ref` option
+For Row Echelon Form, this matrix
 
 ```
-$ mat -ref
 2 -3 5
 4 1 6
 0 7 -4
 ```
 
-which outputs
+becomes
 
 ```
 1 -3/2 5/2
@@ -38,7 +36,35 @@ which outputs
 0 0 0
 ```
 
-`mat` currently only supports signed integer input. You may input matrices of any dimensions.
+## Installation
+
+### Windows
+
+Pre-built Windows binaries can be obtained from the Releases section. Simply download and unzip the folder of the latest release.
+
+Alternatively, build from source yourself. See [Building](#Building).
+
+### Linux
+
+Linux users will have to build from source. see [Building](#Building) below.
+
+## Usage
+
+### Windows
+
+Click on `rref.bat` if you want to reduce the matrix to Reduced Row Echelon Form and click on `ref.bat` if you want to reduce it to Row Echelon Form.
+
+Enter your matrix row by row. Hit `Enter` twice to end the input. The reduced matrix will be outputed.
+
+### Linux
+
+Run `mat` and type in your matrix row by row. Press `Enter` twice (or hit Control+D) to end the input. By default, `mat` will output the matrix in [Reduced Row Echelon Form](https://en.wikipedia.org/wiki/Row_echelon_form). If you want to reduce the matrix into Row Echelon Form instead, pass the `-ref` option.
+
+## Limitations
+
+`mat` currently only supports signed integer input, although output is displayed as signed fractions.
+
+You may input matrices of any dimensions.
 
 ## Building
 
