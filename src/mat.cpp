@@ -25,6 +25,8 @@ int main (int argc, char* argv[]) {
 	string line;
 	vector<vector<int>> data;
 	while (getline(cin,line)) {
+		if (line.size() == 0) 
+			break;
 		data.push_back(vector<int>());
 		stringstream ss(line);
 		int num=0;
