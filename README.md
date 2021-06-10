@@ -2,9 +2,7 @@
 
 A utility that reduces matrices into rref or ref. Can be used to solve systems of linear equations.
 
-For example,
-
-Entering this matrix
+For example, entering this matrix
 
 ```
 2 -3 5
