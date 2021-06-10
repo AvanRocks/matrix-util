@@ -38,7 +38,7 @@ becomes
 
 ### Windows
 
-Pre-built Windows binaries can be obtained from the Releases section. Simply download and unzip the folder of the latest release.
+Pre-built Windows 64-bit binaries can be obtained from the Releases section. Simply download and unzip the folder of the latest release.
 
 Alternatively, build from source yourself. See [Building](#Building).
 
